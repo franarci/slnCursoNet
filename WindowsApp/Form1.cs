@@ -31,7 +31,7 @@ namespace WindowsApp
 
             Producto producto = new Producto(nombre, descripcion, precioCosto, margen, iva, proveedor, categoria, subCategoria);
 
-            lstInstancias.Items.Add("Producto: "+ producto.Nombre + " " + producto.Descripcion + "    Margen: " +producto.Margen +"    IVA: " + producto.IVA+ "   Proveedor: " + producto.Proovedor + "   Categoria: "+ producto.Categoria + "   Subcategoria: " + producto.SubCategoria);
+            lstInstancias.Items.Add("Producto: "+ producto.Nombre + " " + producto.Descripcion + "   Precio costo: "+producto.PrecioCosto+"    Margen: " +producto.Margen + "  Precio Bruto:"+producto.PrecioBruto+"  Precio venta: "+ producto.PrecioVenta+"    IVA: " + producto.IVA+ "   Proveedor: " + producto.Proovedor + "   Categoria: "+ producto.Categoria + "   Subcategoria: " + producto.SubCategoria);
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)

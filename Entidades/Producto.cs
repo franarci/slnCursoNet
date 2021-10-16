@@ -28,7 +28,6 @@ namespace Entidades
         public decimal PrecioVenta {
             get
             {
-                Convert.ToDecimal(1 + this.IVA);
                 return Convert.ToDecimal(IVA) + PrecioBruto;
 
             }
