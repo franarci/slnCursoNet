@@ -47,5 +47,19 @@ namespace WindowsApp
 
             lstInstancias.Items.Add("Proveedor: " + proveedor.Nombre + " " + proveedor.CUIT + "    Contacto: " + proveedor.Contacto + "    Email: " + proveedor.Email + "   Telefono: " + proveedor.Telefono + "   Direccion: " + proveedor.Direccion);
         }
+
+        private void btnVendedor_Click(object sender, EventArgs e)
+        {
+            string nombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un nombre");
+            string apellido = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un apellido");
+            string dni = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un dni");
+            string email = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un email");
+            string telefono = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un telefono");
+            string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
+
+            Vendedor vendedor = new Vendedor(nombre, apellido, dni, email, telefono, direccion);
+
+            lstInstancias.Items.Add("Vendedor: " + vendedor.Nombre + " " + vendedor.Apellido + "    DNI: " + vendedor.DNI + "    Email: " + vendedor.Email + "   Telefono: " + vendedor.Telefono + "   Direccion: " + vendedor.Direccion);
+        }
     }
 }

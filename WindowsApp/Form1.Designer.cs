@@ -102,6 +102,7 @@
             this.btnVendedor.TabIndex = 6;
             this.btnVendedor.Text = "Vendedor";
             this.btnVendedor.UseVisualStyleBackColor = true;
+            this.btnVendedor.Click += new System.EventHandler(this.btnVendedor_Click);
             // 
             // lstInstancias
             // 
