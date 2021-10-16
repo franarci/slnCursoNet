@@ -35,20 +35,22 @@
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnRemito = new System.Windows.Forms.Button();
             this.btnVendedor = new System.Windows.Forms.Button();
+            this.lstInstancias = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnProducto
             // 
-            this.btnProducto.Location = new System.Drawing.Point(12, 323);
+            this.btnProducto.Location = new System.Drawing.Point(262, 402);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(75, 23);
             this.btnProducto.TabIndex = 0;
             this.btnProducto.Text = "Producto";
             this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // btnClienteEmpresa
             // 
-            this.btnClienteEmpresa.Location = new System.Drawing.Point(12, 366);
+            this.btnClienteEmpresa.Location = new System.Drawing.Point(374, 335);
             this.btnClienteEmpresa.Name = "btnClienteEmpresa";
             this.btnClienteEmpresa.Size = new System.Drawing.Size(75, 23);
             this.btnClienteEmpresa.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             // btnCienteIndividuo
             // 
-            this.btnCienteIndividuo.Location = new System.Drawing.Point(131, 323);
+            this.btnCienteIndividuo.Location = new System.Drawing.Point(374, 281);
             this.btnCienteIndividuo.Name = "btnCienteIndividuo";
             this.btnCienteIndividuo.Size = new System.Drawing.Size(75, 23);
             this.btnCienteIndividuo.TabIndex = 2;
@@ -66,7 +68,7 @@
             // 
             // btnFactura
             // 
-            this.btnFactura.Location = new System.Drawing.Point(131, 366);
+            this.btnFactura.Location = new System.Drawing.Point(262, 281);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Size = new System.Drawing.Size(75, 23);
             this.btnFactura.TabIndex = 3;
@@ -75,16 +77,17 @@
             // 
             // btnProveedor
             // 
-            this.btnProveedor.Location = new System.Drawing.Point(251, 323);
+            this.btnProveedor.Location = new System.Drawing.Point(137, 281);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(75, 23);
             this.btnProveedor.TabIndex = 4;
             this.btnProveedor.Text = "Proveedor";
             this.btnProveedor.UseVisualStyleBackColor = true;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnRemito
             // 
-            this.btnRemito.Location = new System.Drawing.Point(251, 366);
+            this.btnRemito.Location = new System.Drawing.Point(262, 335);
             this.btnRemito.Name = "btnRemito";
             this.btnRemito.Size = new System.Drawing.Size(75, 23);
             this.btnRemito.TabIndex = 5;
@@ -93,18 +96,27 @@
             // 
             // btnVendedor
             // 
-            this.btnVendedor.Location = new System.Drawing.Point(371, 353);
+            this.btnVendedor.Location = new System.Drawing.Point(137, 335);
             this.btnVendedor.Name = "btnVendedor";
             this.btnVendedor.Size = new System.Drawing.Size(75, 23);
             this.btnVendedor.TabIndex = 6;
-            this.btnVendedor.Text = "button7";
+            this.btnVendedor.Text = "Vendedor";
             this.btnVendedor.UseVisualStyleBackColor = true;
+            // 
+            // lstInstancias
+            // 
+            this.lstInstancias.FormattingEnabled = true;
+            this.lstInstancias.Location = new System.Drawing.Point(29, 13);
+            this.lstInstancias.Name = "lstInstancias";
+            this.lstInstancias.Size = new System.Drawing.Size(577, 251);
+            this.lstInstancias.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(630, 453);
+            this.Controls.Add(this.lstInstancias);
             this.Controls.Add(this.btnVendedor);
             this.Controls.Add(this.btnRemito);
             this.Controls.Add(this.btnProveedor);
@@ -127,6 +139,7 @@
         private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Button btnRemito;
         private System.Windows.Forms.Button btnVendedor;
+        private System.Windows.Forms.ListBox lstInstancias;
     }
 }
 
