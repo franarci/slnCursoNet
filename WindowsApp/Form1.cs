@@ -31,12 +31,21 @@ namespace WindowsApp
 
             Producto producto = new Producto(nombre, descripcion, precioCosto, margen, iva, proveedor, categoria, subCategoria);
 
-            lstInstancias.Items.Add("Producto: "+ producto.Nombre + " " + producto.Descripcion + "    Margen: " +producto.Margen +"    IVA: " + producto.IVA+ "   Proveedor: " + "   Categoria: "+ producto.Categoria + "   Subcategoria: " + producto.SubCategoria);
+            lstInstancias.Items.Add("Producto: "+ producto.Nombre + " " + producto.Descripcion + "    Margen: " +producto.Margen +"    IVA: " + producto.IVA+ "   Proveedor: " + producto.Proovedor + "   Categoria: "+ producto.Categoria + "   Subcategoria: " + producto.SubCategoria);
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
+            string nombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un nombre");
+            string cuit = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cuit");
+            string contacto = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un contacto");
+            string email = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un email");
+            string telefono = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un telefono");
+            string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
 
+            Proveedor proveedor = new Proveedor(nombre, cuit, contacto, email, telefono, direccion);
+
+            lstInstancias.Items.Add("Proveedor: " + proveedor.Nombre + " " + proveedor.CUIT + "    Contacto: " + proveedor.Contacto + "    Email: " + proveedor.Email + "   Telefono: " + proveedor.Telefono + "   Direccion: " + proveedor.Direccion);
         }
     }
 }
