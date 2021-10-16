@@ -78,5 +78,22 @@ namespace WindowsApp
 
             lstInstancias.Items.Add("Factura Tipo " + factura.Tipo + "  Numero: " + factura.Numero + "    Fecha: " + factura.Fecha + "    Cliente: " + factura.Cliente + "   Direccion: " + factura.Direccion + "   CondicionIVA: " + factura.CondicionIVA + "   CondicionVenta: " + factura.CondicionVenta + "   Detalle: " + factura.Detalle + "   Total: " + factura.Total);
         }
+
+        private void btnRemito_Click(object sender, EventArgs e)
+        {
+            string numero = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un numero");
+            DateTime fecha = Convert.ToDateTime(Microsoft.VisualBasic.Interaction.InputBox("Ingrese una fecha de facturacion  (Ej: 04/10/2000)"));
+            string cliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cliente");
+            string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
+            string condicionIVA = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una condicion iva");
+            string condicionVenta = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una condicion venta");
+            DateTime fechaEntrega = Convert.ToDateTime(Microsoft.VisualBasic.Interaction.InputBox("Ingrese una fecha de entrega  (Ej: 04/10/2000)"));
+            string detalle = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un detalle");
+            decimal total = Convert.ToDecimal(Microsoft.VisualBasic.Interaction.InputBox("Ingrese un monto total (solo numeros)"));
+
+            Remito remito = new Remito(numero, fecha, cliente, direccion, condicionIVA, condicionVenta, detalle, fechaEntrega, total);
+
+            lstInstancias.Items.Add("Remito: " + remito.Numero + "    Fecha: " + remito.Fecha + "    Cliente: " + remito.Cliente + "   Direccion: " + remito.Direccion + "   CondicionIVA: " + remito.CondicionIVA + "   CondicionVenta: " + remito.CondicionVenta +"   Fecha Entrega: " +remito.FechaEntrega+ "   Detalle: " + remito.Detalle + "   Total: " + remito.Total);
+        }
     }
 }

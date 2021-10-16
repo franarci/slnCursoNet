@@ -94,6 +94,7 @@
             this.btnRemito.TabIndex = 5;
             this.btnRemito.Text = "Remito";
             this.btnRemito.UseVisualStyleBackColor = true;
+            this.btnRemito.Click += new System.EventHandler(this.btnRemito_Click);
             // 
             // btnVendedor
             // 
