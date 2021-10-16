@@ -22,13 +22,13 @@ namespace Entidades
         public decimal PrecioBruto {
             get
             {
-                return Convert.ToDecimal(Margen) + PrecioCosto;
+                return this.PrecioCosto * (Convert.ToDecimal(1 + this.Margen));
             }
         }
         public decimal PrecioVenta {
             get
             {
-                return Convert.ToDecimal(IVA) + PrecioBruto;
+                return Convert.ToDecimal(IVA + 1) * PrecioBruto;
 
             }
         }
