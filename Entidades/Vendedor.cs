@@ -14,5 +14,15 @@ namespace Entidades
         public string Email { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
+
+        public Vendedor(string nombre, string apellido, string dni, string email, string telefono, string direccion)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            DNI = dni;
+            Email = email;
+            Telefono = telefono;
+            Direccion = direccion;
+        }
     }
 }
