@@ -17,5 +17,18 @@ namespace Entidades
         public string CondicionVenta { get; set; }
         public string Detalle { get; set; }
         public decimal Total { get; set; }
+
+        public Factura(string tipo, string numero, DateTime fecha, string cliente, string dir, string condIva, string condVenta, string detalle, decimal total)
+        {
+            Tipo = tipo;
+            Numero = numero;
+            Fecha = fecha;
+            Cliente = cliente;
+            Direccion = dir;
+            CondicionIVA = condIva;
+            CondicionVenta = condVenta;
+            Detalle = detalle;
+            Total = total;
+        }
     }
 }
