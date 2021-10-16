@@ -14,5 +14,15 @@ namespace Entidades
         public string Email { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
+
+        public ClienteEmpresa(string nombre, string cuit, string contacto, string email, string telefono, string direccion)
+        {
+            Nombre = nombre;
+            CUIT = cuit;
+            Contacto = contacto;
+            Email = email;
+            Telefono = telefono;
+            Direccion = direccion;
+        }
     }
 }
