@@ -61,5 +61,22 @@ namespace WindowsApp
 
             lstInstancias.Items.Add("Vendedor: " + vendedor.Nombre + " " + vendedor.Apellido + "    DNI: " + vendedor.DNI + "    Email: " + vendedor.Email + "   Telefono: " + vendedor.Telefono + "   Direccion: " + vendedor.Direccion);
         }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            string tipo = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un tipo");
+            string numero = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un numero");
+            DateTime fecha = Convert.ToDateTime(Microsoft.VisualBasic.Interaction.InputBox("Ingrese una fecha de facturacion  (Ej: 04/10/2000)"));
+            string cliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cliente");
+            string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
+            string condicionIVA = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una condicion iva");
+            string condicionVenta = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una condicion venta");
+            string detalle = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un detalle");
+            decimal total = Convert.ToDecimal(Microsoft.VisualBasic.Interaction.InputBox("Ingrese un monto total (solo numeros)"));
+
+            Factura factura = new Factura(tipo, numero, fecha, cliente, direccion, condicionIVA, condicionVenta, detalle, total);
+
+            lstInstancias.Items.Add("Factura Tipo " + factura.Tipo + "  Numero: " + factura.Numero + "    Fecha: " + factura.Fecha + "    Cliente: " + factura.Cliente + "   Direccion: " + factura.Direccion + "   CondicionIVA: " + factura.CondicionIVA + "   CondicionVenta: " + factura.CondicionVenta + "   Detalle: " + factura.Detalle + "   Total: " + factura.Total);
+        }
     }
 }
