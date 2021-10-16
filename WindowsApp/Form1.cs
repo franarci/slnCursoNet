@@ -109,5 +109,19 @@ namespace WindowsApp
 
             lstInstancias.Items.Add("Cliente: " + cliente.Nombre + " " + cliente.Apellido + "    DNI: " + cliente.CUIT + "    Email: " + cliente.Email + "   Telefono: " + cliente.Telefono + "   Direccion: " + cliente.Direccion);
         }
+
+        private void btnClienteEmpresa_Click(object sender, EventArgs e)
+        {
+            string nombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un nombre");
+            string cuit = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cuit");
+            string contacto = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un contacto");
+            string email = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un email");
+            string telefono = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un telefono");
+            string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
+
+            ClienteEmpresa cliente = new ClienteEmpresa(nombre, cuit, contacto, email, telefono, direccion);
+
+            lstInstancias.Items.Add("Cliente: " + cliente.Nombre + "   CUIT: " + cliente.CUIT + "   Contacto: " + cliente.Contacto + "    Email: " + cliente.Email + "   Telefono: " + cliente.Telefono + "   Direccion: " + cliente.Direccion);
+        }
     }
 }

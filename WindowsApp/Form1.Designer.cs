@@ -56,6 +56,7 @@
             this.btnClienteEmpresa.TabIndex = 1;
             this.btnClienteEmpresa.Text = "ClienteEmpresa";
             this.btnClienteEmpresa.UseVisualStyleBackColor = true;
+            this.btnClienteEmpresa.Click += new System.EventHandler(this.btnClienteEmpresa_Click);
             // 
             // btnCienteIndividuo
             // 
