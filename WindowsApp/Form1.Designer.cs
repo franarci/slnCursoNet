@@ -65,6 +65,7 @@
             this.btnCienteIndividuo.TabIndex = 2;
             this.btnCienteIndividuo.Text = "ClienteIndividuo";
             this.btnCienteIndividuo.UseVisualStyleBackColor = true;
+            this.btnCienteIndividuo.Click += new System.EventHandler(this.btnCienteIndividuo_Click);
             // 
             // btnFactura
             // 

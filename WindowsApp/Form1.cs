@@ -82,7 +82,7 @@ namespace WindowsApp
         private void btnRemito_Click(object sender, EventArgs e)
         {
             string numero = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un numero");
-            DateTime fecha = Convert.ToDateTime(Microsoft.VisualBasic.Interaction.InputBox("Ingrese una fecha de facturacion  (Ej: 04/10/2000)"));
+            DateTime fecha = Convert.ToDateTime(Microsoft.VisualBasic.Interaction.InputBox("Ingrese una fecha  (Ej: 04/10/2000)"));
             string cliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cliente");
             string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
             string condicionIVA = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una condicion iva");
@@ -94,6 +94,20 @@ namespace WindowsApp
             Remito remito = new Remito(numero, fecha, cliente, direccion, condicionIVA, condicionVenta, detalle, fechaEntrega, total);
 
             lstInstancias.Items.Add("Remito: " + remito.Numero + "    Fecha: " + remito.Fecha + "    Cliente: " + remito.Cliente + "   Direccion: " + remito.Direccion + "   CondicionIVA: " + remito.CondicionIVA + "   CondicionVenta: " + remito.CondicionVenta +"   Fecha Entrega: " +remito.FechaEntrega+ "   Detalle: " + remito.Detalle + "   Total: " + remito.Total);
+        }
+
+        private void btnCienteIndividuo_Click(object sender, EventArgs e)
+        {
+            string nombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un nombre");
+            string apellido = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un apellido");
+            string cuit = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cuit");
+            string email = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un email");
+            string telefono = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un telefono");
+            string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
+
+            ClienteIndividuo cliente = new ClienteIndividuo(nombre, apellido, cuit, email, telefono, direccion);
+
+            lstInstancias.Items.Add("Cliente: " + cliente.Nombre + " " + cliente.Apellido + "    DNI: " + cliente.CUIT + "    Email: " + cliente.Email + "   Telefono: " + cliente.Telefono + "   Direccion: " + cliente.Direccion);
         }
     }
 }
