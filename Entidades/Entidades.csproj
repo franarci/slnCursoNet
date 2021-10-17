@@ -43,13 +43,11 @@
   <ItemGroup>
     <Compile Include="BaseModels\DocumentoComercial.cs" />
     <Compile Include="BaseModels\Persona.cs" />
-    <Compile Include="Models\ClienteEmpresa.cs" />
     <Compile Include="Models\ClienteIndividuo.cs" />
     <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\Factura.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Proveedor.cs" />
     <Compile Include="Models\Remito.cs" />
     <Compile Include="Models\Vendedor.cs" />
   </ItemGroup>
