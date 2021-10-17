@@ -17,7 +17,7 @@ namespace Entidades.BaseModels
         public string Detalle { get; set; }
         public decimal Total { get; set; }
 
-        public DocumentoComercial( tring numero, DateTime fecha, string cliente, string dir, string condIva, string condVenta, string detalle, decimal total)
+        public DocumentoComercial(string numero, DateTime fecha, string cliente, string dir, string condIva, string condVenta, string detalle, decimal total)
         {
             Numero = numero;
             Fecha = fecha;
