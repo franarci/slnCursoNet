@@ -45,6 +45,7 @@
     <Compile Include="BaseModels\Persona.cs" />
     <Compile Include="Models\ClienteEmpresa.cs" />
     <Compile Include="Models\ClienteIndividuo.cs" />
+    <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\Factura.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
