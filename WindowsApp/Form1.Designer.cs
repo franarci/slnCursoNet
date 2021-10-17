@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.btnProducto = new System.Windows.Forms.Button();
-            this.btnClienteEmpresa = new System.Windows.Forms.Button();
+            this.btnEmpresa = new System.Windows.Forms.Button();
             this.btnCienteIndividuo = new System.Windows.Forms.Button();
             this.btnFactura = new System.Windows.Forms.Button();
-            this.btnProveedor = new System.Windows.Forms.Button();
             this.btnRemito = new System.Windows.Forms.Button();
             this.btnVendedor = new System.Windows.Forms.Button();
             this.lstInstancias = new System.Windows.Forms.ListBox();
@@ -40,7 +39,7 @@
             // 
             // btnProducto
             // 
-            this.btnProducto.Location = new System.Drawing.Point(463, 391);
+            this.btnProducto.Location = new System.Drawing.Point(569, 339);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(75, 23);
             this.btnProducto.TabIndex = 0;
@@ -48,19 +47,19 @@
             this.btnProducto.UseVisualStyleBackColor = true;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
-            // btnClienteEmpresa
+            // btnEmpresa
             // 
-            this.btnClienteEmpresa.Location = new System.Drawing.Point(575, 339);
-            this.btnClienteEmpresa.Name = "btnClienteEmpresa";
-            this.btnClienteEmpresa.Size = new System.Drawing.Size(75, 23);
-            this.btnClienteEmpresa.TabIndex = 1;
-            this.btnClienteEmpresa.Text = "ClienteEmpresa";
-            this.btnClienteEmpresa.UseVisualStyleBackColor = true;
-            this.btnClienteEmpresa.Click += new System.EventHandler(this.btnClienteEmpresa_Click);
+            this.btnEmpresa.Location = new System.Drawing.Point(569, 285);
+            this.btnEmpresa.Name = "btnEmpresa";
+            this.btnEmpresa.Size = new System.Drawing.Size(75, 23);
+            this.btnEmpresa.TabIndex = 1;
+            this.btnEmpresa.Text = "Empresa";
+            this.btnEmpresa.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Click += new System.EventHandler(this.btnEmpresa_Click);
             // 
             // btnCienteIndividuo
             // 
-            this.btnCienteIndividuo.Location = new System.Drawing.Point(575, 285);
+            this.btnCienteIndividuo.Location = new System.Drawing.Point(338, 285);
             this.btnCienteIndividuo.Name = "btnCienteIndividuo";
             this.btnCienteIndividuo.Size = new System.Drawing.Size(75, 23);
             this.btnCienteIndividuo.TabIndex = 2;
@@ -77,16 +76,6 @@
             this.btnFactura.Text = "Factura";
             this.btnFactura.UseVisualStyleBackColor = true;
             this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-            // 
-            // btnProveedor
-            // 
-            this.btnProveedor.Location = new System.Drawing.Point(338, 285);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(75, 23);
-            this.btnProveedor.TabIndex = 4;
-            this.btnProveedor.Text = "Proveedor";
-            this.btnProveedor.UseVisualStyleBackColor = true;
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnRemito
             // 
@@ -124,10 +113,9 @@
             this.Controls.Add(this.lstInstancias);
             this.Controls.Add(this.btnVendedor);
             this.Controls.Add(this.btnRemito);
-            this.Controls.Add(this.btnProveedor);
             this.Controls.Add(this.btnFactura);
             this.Controls.Add(this.btnCienteIndividuo);
-            this.Controls.Add(this.btnClienteEmpresa);
+            this.Controls.Add(this.btnEmpresa);
             this.Controls.Add(this.btnProducto);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -138,10 +126,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnProducto;
-        private System.Windows.Forms.Button btnClienteEmpresa;
+        private System.Windows.Forms.Button btnEmpresa;
         private System.Windows.Forms.Button btnCienteIndividuo;
         private System.Windows.Forms.Button btnFactura;
-        private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Button btnRemito;
         private System.Windows.Forms.Button btnVendedor;
         private System.Windows.Forms.ListBox lstInstancias;

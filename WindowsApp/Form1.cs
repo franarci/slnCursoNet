@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using Entidades.Models;
 
 namespace WindowsApp
 {
@@ -34,19 +35,6 @@ namespace WindowsApp
             lstInstancias.Items.Add("Producto: "+ producto.Nombre + " " + producto.Descripcion + "   Precio costo: "+producto.PrecioCosto+"    Margen: " +producto.Margen + "  Precio Bruto:"+producto.PrecioBruto+"  Precio venta: "+ producto.PrecioVenta+"    IVA: " + producto.IVA+ "   Proveedor: " + producto.Proovedor + "   Categoria: "+ producto.Categoria + "   Subcategoria: " + producto.SubCategoria);
         }
 
-        private void btnProveedor_Click(object sender, EventArgs e)
-        {
-            string nombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un nombre");
-            string cuit = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cuit");
-            string contacto = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un contacto");
-            string email = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un email");
-            string telefono = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un telefono");
-            string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
-
-            Proveedor proveedor = new Proveedor(nombre, cuit, contacto, email, telefono, direccion);
-
-            lstInstancias.Items.Add("Proveedor: " + proveedor.Nombre + " " + proveedor.CUIT + "    Contacto: " + proveedor.Contacto + "    Email: " + proveedor.Email + "   Telefono: " + proveedor.Telefono + "   Direccion: " + proveedor.Direccion);
-        }
 
         private void btnVendedor_Click(object sender, EventArgs e)
         {
@@ -110,7 +98,7 @@ namespace WindowsApp
             lstInstancias.Items.Add("Cliente: " + cliente.Nombre + " " + cliente.Apellido + "    DNI: " + cliente.CUIT + "    Email: " + cliente.Email + "   Telefono: " + cliente.Telefono + "   Direccion: " + cliente.Direccion);
         }
 
-        private void btnClienteEmpresa_Click(object sender, EventArgs e)
+        private void btnEmpresa_Click(object sender, EventArgs e)
         {
             string nombre = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un nombre");
             string cuit = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un cuit");
@@ -119,9 +107,9 @@ namespace WindowsApp
             string telefono = Microsoft.VisualBasic.Interaction.InputBox("Ingrese un telefono");
             string direccion = Microsoft.VisualBasic.Interaction.InputBox("Ingrese una direccion");
 
-            ClienteEmpresa cliente = new ClienteEmpresa(nombre, cuit, contacto, email, telefono, direccion);
+            Empresa empresa = new Empresa(nombre, cuit, contacto, email, telefono, direccion);
 
-            lstInstancias.Items.Add("Cliente: " + cliente.Nombre + "   CUIT: " + cliente.CUIT + "   Contacto: " + cliente.Contacto + "    Email: " + cliente.Email + "   Telefono: " + cliente.Telefono + "   Direccion: " + cliente.Direccion);
+            lstInstancias.Items.Add("Empresa: " + empresa.Nombre + "   CUIT: " + empresa.CUIT + "   Contacto: " + empresa.Contacto + "    Email: " + empresa.Email + "   Telefono: " + empresa.Telefono + "   Direccion: " + empresa.Direccion);
         }
     }
 }
